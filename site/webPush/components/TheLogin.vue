@@ -2,20 +2,19 @@
 
 
 import {ref} from "vue";
-// import {useRoute} from "vue-router";
-// import {useNuxtApp, useRouter} from "nuxt/app";
-import {useNuxtApp, useRoute,useRouter} from "#app";
-
-import axios from 'axios'
-
-
+// import axios from "axios"
+//
+// const axiosInstance = axios.create({
+//   baseURL: 'http://localhost:7788', // 로컬 포트에 맞게 변경
+// });
 /**
  *  로그인
  */
-const loginTest = () => {
+const loginTest = async () => {
   console.log("ttttt")
-  // const res = await $axios.post("/api")
-  // return res.data || {};
+  const res = await fetch("/api/user/v1/loginApi_login");
+  console.log(res);
+
 }
 
 
