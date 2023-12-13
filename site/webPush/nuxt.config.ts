@@ -6,6 +6,27 @@ export default defineNuxtConfig({
      * */
     ssr : false,
 
+    app: {
+      head: {
+        htmlAttrs : {
+          lang : "ko",
+        },
+        title: "webPush",
+        charset: "utf-8",
+        viewport: "width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1",
+        meta: [
+          { name: "description", content: "" },
+          { "http-equiv" : "X-UA-Compatible", content : "IE=edge,chrome=1" },
+          { "http-equiv" : "pragma", content : "no-cache" },
+          { "http-equiv" : "cache-control", content : "no-cache" },
+          { "http-equiv" : "expires", content : "0" },
+        ],
+        link: [
+          { rel: "icon", type: "image/png", href: "/favicon.png" }
+        ]
+      }
+    },
+
     enabled: true ,
     proxy : {
       proxies : {
@@ -28,6 +49,10 @@ export default defineNuxtConfig({
       typeCheck : false,
 
       shim : true
+    },
+
+    build: {
+      // transpile: ['#app']
     },
 
   },
