@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+/site/webPush/.nuxt
+
+/site/webPush/node_modules
