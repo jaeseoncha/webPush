@@ -33,6 +33,14 @@ export default defineNuxtConfig({
         "/api" : "http://localhost:7788",
       }
     },
+    // proxy: {
+    //   proxies: {
+    //     '/api/': {
+    //       target: 'http://localhost:7788',
+    //       changeOrigin: true,
+    //     },
+    //   },
+    // },
     /**
      * 타입스크립트 설정
      * */
@@ -51,10 +59,14 @@ export default defineNuxtConfig({
       shim : true
     },
 
+    //...
     build: {
-      // transpile: ['#app']
+      loaders: {
+        css: {
+          modules: false // CSS 파일을 모듈로 처리하지 않도록 설정
+        }
+      }
     },
-
   },
 
 

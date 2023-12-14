@@ -83,5 +83,3 @@ const isUser = ref( false );
   </body>
 </template>
 
-<style lang="scss">
-</style>

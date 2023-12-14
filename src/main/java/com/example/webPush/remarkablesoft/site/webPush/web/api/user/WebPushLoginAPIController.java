@@ -1,11 +1,9 @@
 package com.example.webPush.remarkablesoft.site.webPush.web.api.user;
 
+import com.example.webPush.remarkablesoft.service.UserInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -14,7 +12,10 @@ public class WebPushLoginAPIController {
 		
 
 		@PostMapping( value = "/loginApi_login" )
-		public ResponseEntity<?> getUser () {
+		public ResponseEntity<?> getUser ( @RequestBody UserInfo userInfo ) {
+
+			System.out.println( "userInfo = " + userInfo );
+
 				return ResponseEntity.ok( true );
 		}
 
